@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Avarage</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Avarage with JavaScript</h1>
+    <form>
+     Firts Number:<br>
+     <input type="text" id="t1">
+     <br>
+     Second Number:<br>
+     <input type="text" id="t2">
+     <br>
+     Third Number:<br>
+     <input type="text" id="t3">
+     <br><br>
+     <input type="button" value="Clear" onclick="onClearClick();"/>
+     <br><br>
+     <input type="button" value="Calculate" onclick="Calcular();">
+    </form>
+    <p id="promedio"></p>
+  </body>
+  <script>
+    function Calcular() {
+    var vr1 = document.getElementById('t1').value;
+    var vr2 = document.getElementById('t2').value;
+    var vr3 = document.getElementById('t3').value;
+    var p = (parseFloat(vr1)+parseFloat(vr2)+parseFloat(vr3))/3;
+    document.getElementById('promedio').innerHTML = p;
+    }
+
+     function onClearClick()
+     {
+        document.getElementById("t1").value = "";
+        document.getElementById("t2").value = "";
+        document.getElementById("t3").value = "";
+     }
+  </script>
+</html>
